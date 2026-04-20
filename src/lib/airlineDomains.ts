@@ -1,0 +1,48 @@
+export const AIRLINE_DOMAINS: Record<string, string> = {
+  "JL": "japanairlines.com",
+  "EK": "emirates.com",
+  "SQ": "singaporeair.com",
+  "QR": "qatarairways.com",
+  "AI": "airindia.com",
+  "6E": "goindigo.in",
+  "TG": "thaiairways.com",
+  "NH": "ana.co.jp",
+  "VJ": "vietjetair.com",
+  "FZ": "flydubai.com",
+  "EY": "etihad.com",
+  "LH": "lufthansa.com",
+  "BA": "britishairways.com",
+  "AF": "airfrance.com",
+  "CX": "cathaypacific.com",
+  "MH": "malaysiaairlines.com",
+  "TK": "turkishairlines.com",
+  "UL": "srilankan.com",
+  "UK": "airasia.com",
+  "AK": "airasia.com",
+  "AA": "aa.com",
+  "DL": "delta.com",
+  "UA": "united.com",
+  "QF": "qantas.com",
+  "NZ": "airnewzealand.com",
+  "AC": "aircanada.com",
+  "WS": "westjet.com",
+  "FR": "ryanair.com",
+  "U2": "easyjet.com",
+  "WN": "southwest.com",
+  "B6": "jetblue.com",
+  "AS": "alaskaair.com",
+  "NK": "spirit.com",
+  "F9": "flyfrontier.com",
+  "G4": "allegiantair.com",
+  "HA": "hawaiianairlines.com",
+  "SY": "suncountry.com",
+  "PR": "philippineairlines.com",
+  "VN": "vietnamairlines.com",
+  "SV": "saudia.com",
+  "MS": "egyptair.com"
+};
+
+export const getAirlineLogoUrl = (iata: string): string => {
+  if (!iata) return `https://logo.clearbit.com/`;
+  return `https://logo.clearbit.com/${AIRLINE_DOMAINS[iata.toUpperCase()] ?? ""}`;
+};
